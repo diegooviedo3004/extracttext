@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 
 // Security middleware
 app.use(helmet());
-app.use(express.json({ limit: '100kb' }));
+app.use(express.json());
 
 // Rate limiting (100 requests per 15 minutes)
 const limiter = rateLimit({
